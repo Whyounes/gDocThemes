@@ -1,0 +1,22 @@
+<ul>
+    {% for key, nav in navigation %}
+        <li>
+
+        {% if nav is iterable %}
+            {{ key }}
+            <ul>
+                {% for k, v in nav %}
+                    <li>
+                        <a href="{{ v }}">{{ k }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            {% for k, v in nav %}
+                <a href="{{ k }}">{{ v }}</a>
+            {% endfor %}
+        {% endif %}
+
+        </li>
+    {% endfor %}
+</ul>

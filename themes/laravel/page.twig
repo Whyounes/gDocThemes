@@ -1,0 +1,23 @@
+{% extends "layout/base.twig" %}
+
+{% block content %}
+<nav id="slide-menu" class="slide-menu" role="navigation">
+
+    <div class="brand">
+        <a href="/">
+            <img src="/assets/img/laravel-logo-white.png" height="50">
+        </a>
+    </div>
+</nav>
+
+<div class="docs-wrapper container">
+
+    <section class="sidebar">
+        {% include "nav.twig" %}
+    </section>
+
+    <article>
+        {{ content|raw }}
+    </article>
+</div>
+{% endblock %}

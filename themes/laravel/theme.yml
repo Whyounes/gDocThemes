@@ -1,0 +1,6 @@
+name: laravel
+
+assets:
+  - 'assets/css/laravel.css'
+  - 'assets/js/laravel.js'
+  - 'assets/img/laravel-logo.png'
