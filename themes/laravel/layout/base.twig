@@ -1,33 +1,32 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>{% if title is defined %} {{ title }} - {% endif %}Laravel - The PHP Framework For Web Artisans</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="author" content="Taylor Otwell">
-    <meta name="description" content="Laravel - The PHP framework for web artisans.">
-    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--[if lte IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>{% if title is defined %} {{ title }} - {% endif %}Laravel - The PHP Framework For Web Artisans</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Taylor Otwell">
+        <meta name="description" content="Laravel - The PHP framework for web artisans.">
+        <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-</head>
-<body class="docs language-php">
+    </head>
+    <body class="docs language-php">
+        {% block content %}{% endblock %}
 
-{% block content %}{% endblock %}
+        <footer class="main">
+            <p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
 
-<footer class="main">
-    <p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
-
-    <p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
-</footer>
-{% for asset in assets %}
-    {% if asset ends with '.css' %}
-        <link rel="stylesheet" href="{{ asset }}">
-    {% elseif asset ends with '*.js' %}
-        <script src="{{ asset }}"></script>
-    {% endif %}
-{% endfor %}
-</body>
+            <p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+        </footer>
+        {% for asset in assets %}
+            {% if asset ends with '.css' %}
+                <link rel="stylesheet" href="{{ asset }}">
+            {% elseif asset ends with '.js' %}
+                <script src="{{ asset }}"></script>
+            {% endif %}
+        {% endfor %}
+    </body>
 </html>
