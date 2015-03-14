@@ -12,9 +12,7 @@
                 {% endfor %}
             </ul>
         {% else %}
-            {% for k, v in nav %}
-                <a href="{{ k }}">{{ v }}</a>
-            {% endfor %}
+            <a href="/{{ rootPath }}/{{ key }}">{{ nav }}</a>
         {% endif %}
 
         </li>
